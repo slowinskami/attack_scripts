@@ -15,7 +15,7 @@ printf "\n !*!*! Starting arpspoof attacks for the following IPs\n: $IPS" 2>&1 |
 
 printf "Setting IP forwarding : "
 #Set up IP forwarding
-echo 1 | sudo tee /proc/sys/net/ipv4/ip\_forward
+echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward
 
 printf "\n\n"
 

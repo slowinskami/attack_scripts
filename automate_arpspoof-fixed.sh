@@ -45,7 +45,7 @@ do
     else
         printf "$i) $Random_IP\n" 2>&1 | tee -a arpspoof_output/arpspoof_terminal_output.txt
         printf "A) Setting IP forwarding..."
-        echo 1 | sudo tee /proc/sys/net/ipv4/ip\_forward  #Set up IP forwarding
+        echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward  #Set up IP forwarding
 
         start_current_time=$(date "+%Y.%m.%d-%H.%M.%S")
         printf "\nB) Executing : $Arpspoof$Random_IP$sep$router$noout\n" 2>&1 | tee -a arpspoof_output/arpspoof_terminal_output.txt
@@ -72,7 +72,7 @@ do
         killall tcpdump 2>&1 | tee -a arpspoof_output/arpspoof_terminal_output.txt
         
         printf "\nG) Disabling IP forwarding..." 2>&1 | tee -a arpspoof_output/arpspoof_terminal_output.txt
-        echo 0 | sudo tee /proc/sys/net/ipv4/ip\_forward  #Sets up IP forwarding
+        echo 0 | sudo tee /proc/sys/net/ipv4/ip_forward  #Sets up IP forwarding
 
         stop_current_time=$(date "+%Y.%m.%d-%H.%M.%S")
         printf "\n\nSUMMARY of iteration $i: \n" 2>&1 | tee -a arpspoof_output/arpspoof_terminal_output.txt
